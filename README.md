@@ -67,7 +67,10 @@
    const TOKEN = '你的_BOT_TOKEN'; 
    const OWNER_ID = '你的_数字_ID'; 
    const SECRET_PATH = '/你的自定义暗号路径'; // 例如 /xiagefei120
-   ```
+  - 配置 Secret 变量：
+  - 进入 Worker -> Settings -> Variables and Secrets。
+  - 点击 Add，添加变量名 BOT_TOKEN，类型选择 Secret，填入你在 @BotFather 重新获取的全新 Token。
+  - 点击 Save and deploy。
 3. 点击右上角 **Deploy** 部署。
 4. 返回 Worker 详情页，进入 **Settings** -> **Domains & Routes** -> **Add Custom Domain**，绑定你的自定义域名（例如 `tgchat.example.com`）。
 
