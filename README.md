@@ -82,10 +82,10 @@
 
 | 变量名称 (Variable Name) | 必填 | 示例值 | 作用说明 |
 | :--- | :---: | :--- | :--- |
-| `BOT_TOKEN` | **是** | `8619740095:AAGs...` | Telegram Bot Token（建议开启 Encrypt 加密存储） |
-| `SECRET_PATH` | **是** | `/xiagefei120` | Webhook 路径暗号（必须以 `/` 开头） |
-| `OWNER_GROUP_IDS` | **是** | `-1004405122697, -1001234567890` | 授权管理群 ID，**多个群用英文逗号 `,` 分隔** |
-| `OWNER_ID` | 否 | `8913877802` | 超级管理员个人数字 ID（用于私聊专属后台管理） |
+| `BOT_TOKEN` | **是** | `` | Telegram Bot Token（建议开启 Encrypt 加密存储） |
+| `SECRET_PATH` | **是** | `/` | Webhook 路径暗号（必须以 `/` 开头） |
+| `OWNER_GROUP_IDS` | **是** | `1,2` | 授权管理群 ID，**多个群用英文逗号 `,` 分隔** |
+| `OWNER_ID` | 否 | `` | 超级管理员个人数字 ID（用于私聊专属后台管理） |
 
 ---
 
@@ -109,7 +109,7 @@ https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<你的Worker域�
 
 **示例：**
 ```text
-https://api.telegram.org/bot8619740095:AAGsFz57i0Yn_I4YLPtjRJKcnxryonH8woE/setWebhook?url=https://tgchat.2pac.pp.ua/xiagefei120&drop_pending_updates=true
+https://api.telegram.org/](https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=https://<你的Worker域名><SECRET_PATH>&drop_pending_updates=true)
 ```
 
 若页面返回 `{"ok":true,"result":true,"description":"Webhook was set"}`，则代表注册成功。
@@ -123,8 +123,8 @@ https://api.telegram.org/bot8619740095:AAGsFz57i0Yn_I4YLPtjRJKcnxryonH8woE/setWe
    Worker 多群组版运行正常！
    Token 状态: 已配置 ✅
    KV 状态: 已成功绑定 ✅
-   超管个人ID: 8913877802
-   已授权管理群组 (1个): -1004405122697
+   超管个人ID: XXXXXXXXXXXXX
+   已授权管理群组 (1个): -100XXXXXXXXXXXX
    ```
 2. **群组管理员赋权**：务必将机器人拉入 `OWNER_GROUP_IDS` 中配置的所有群组，并将机器人提升为**群管理员**（至少开启“发送消息”和“删除消息”权限）。
 3. **唤出管理面板**：
